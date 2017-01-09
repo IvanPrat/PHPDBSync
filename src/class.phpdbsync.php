@@ -181,12 +181,12 @@
 
               foreach($cols as $col)
               {
-                $col_name                 = $col['Field'];
-                $col_type 				        = $col['Type'];
-                $col_is_null 			        = ($col['Null'] == 'NO' ? 'NOT NULL' : 'NULL');
-                $col_key                  = $col['Key'];
-                $col_default 			        = $col['Default'];
-                $col_extra 					      = $col['Extra'];
+                $col_name         = $col['Field'];
+                $col_type         = $col['Type'];
+                $col_is_null      = ($col['Null'] == 'NO' ? 'NOT NULL' : 'NULL');
+                $col_key          = $col['Key'];
+                $col_default      = $col['Default'];
+                $col_extra        = $col['Extra'];
 
                 if($col_key == 'PRI')
                   $table_primary_keys[] = $col_name;
@@ -582,23 +582,23 @@
 
                 $col_value          = $this->mainDatabaseInfo[$table][$k_1];
 
-                $col_name 				  = $col_value['Field'];              // ie: id
-                $col_type 				  = $col_value['Type'];               // ie: int(10) unsigned
-                $col_is_null 			  = $col_value['Null'];               // ie: NO
-                $col_default 			  = $col_value['Default'];            // ie: default value
+                $col_name           = $col_value['Field'];              // ie: id
+                $col_type           = $col_value['Type'];               // ie: int(10) unsigned
+                $col_is_null        = $col_value['Null'];               // ie: NO
+                $col_default        = $col_value['Default'];            // ie: default value
                 $col_extra          = $col_value['Extra'];              // ie: auto_increment
 
                 // Column information (self)
 
-                $col_info			      = $this->mainDatabaseInfo[$table][$k_1];
+                $col_info           = $this->mainDatabaseInfo[$table][$k_1];
 
-                $this_name_col			= $col_info['Field'];
+                $this_name_col      = $col_info['Field'];
                 $this_type_col      = $col_info['Type'];
                 $this_is_null_col   = $col_info['Null'];
                 $this_default_col   = $col_info['Default'];
                 $this_extra         = $col_info['Extra'];
 
-                $val_is_null_col 		= ($col_value['Null'] == 'NO' ? 'NOT NULL' : 'NULL');
+                $val_is_null_col    = ($col_value['Null'] == 'NO' ? 'NOT NULL' : 'NULL');
 
                 // Create col in this current table
                 if(!isset($current_table_cols[$k_1]))
